@@ -262,11 +262,11 @@ ${JSON.stringify(albumSchema(album), null, 2)}
 <p class="date">${escapeHtml(album.date)}</p>
 <p class="genre">${escapeHtml(album.genre)}</p>
 <p class="summary">${album.numTracks} tracks by Entroversu. Created in Switzerland as part of the 300 albums · 300 genres project.</p>
-<div class="services" aria-label="Listen to ${escapeHtml(album.title)}">
+<nav class="services" aria-label="Listen to ${escapeHtml(album.title)}">
 <a href="${album.spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
 <a href="${album.apple}" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
 <a href="${album.youtube}" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
-</div>
+</nav>
 </header>
 <section class="tracks">
 <h2>Tracklist</h2>
