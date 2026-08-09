@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "entroversu-entities",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-09",
+  "workers_dev": true,
+  "preview_urls": false,
+  "kv_namespaces": [
+    {
+      "binding": "ENTITIES",
+      "id": "7d54bbe8a7d246bf883bf2db90c87bb7"
+    }
+  ]
+}

@@ -4,6 +4,8 @@ Static website for [entroversu.com](https://entroversu.com/).
 
 The public `SIGNALS RECEIVED` badge uses [hits.sh](https://hits.sh/) to count anonymous page views across the homepage and album pages. It uses no cookies, fingerprinting or IP tracking; the displayed number represents page-load signals rather than unique people.
 
+`ENTITIES ENTERED` is an approximate unique-browser count. The site stores only the local value `yes` in the visitor's browser after its first successful entry; no name, account, fingerprint or individual identifier is created or retained by Entroversu. Restricted browser modes and multiple devices mean that this number is intentionally approximate.
+
 ## Updating the catalogue
 
 1. Update the album card and homepage JSON-LD in `index.html`.

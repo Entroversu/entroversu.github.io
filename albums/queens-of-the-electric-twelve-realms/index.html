@@ -61,9 +61,16 @@ h1{font-size:clamp(2rem,5vw,4.2rem);font-weight:300;line-height:1.05;text-wrap:b
 .album-nav a:last-child{text-align:right}
 .album-nav a:hover,.album-nav a:focus-visible{color:var(--accent);outline:none}
 footer{text-align:center;color:var(--dim);font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:2rem}
-.signal-counter{display:flex;flex-direction:column;align-items:center;gap:.55rem;margin-bottom:1.2rem}
+.cosmic-counters{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:1rem 1.5rem;margin-bottom:1.2rem}
+.entity-counter,.signal-counter{display:flex;flex-direction:column;align-items:center;gap:.55rem}
+.entity-badge{display:flex;height:20px;font-family:Verdana,Geneva,sans-serif;font-size:11px;line-height:20px;letter-spacing:0;text-transform:uppercase;opacity:.82}
+.entity-badge span{padding:0 7px}
+.entity-badge .entity-label{color:#fff;background:#11100f}
+.entity-badge .entity-value{min-width:28px;color:#fff;background:#6e5d3a;font-weight:700}
+.entity-counter[data-state="loading"] .entity-value{animation:pulse 1.8s ease-in-out infinite}
 .signal-counter img{display:block;width:auto;height:20px;opacity:.82}
-.signal-counter span{font-size:.55rem;letter-spacing:.16em}
+.counter-note{font-size:.55rem;letter-spacing:.16em}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 @media(max-width:760px){body{padding:1rem}.album{grid-template-columns:1fr}.tracks{grid-column:auto}.tracks li{grid-template-columns:1.6rem 1fr}.isrc{grid-column:2}.album-nav{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -246,7 +253,8 @@ footer{text-align:center;color:var(--dim);font-family:'Space Mono',monospace;fon
 <span></span>
 </nav>
 </main>
-<footer><div class="signal-counter"><img src="https://hits.sh/entroversu.com.svg?view=total&amp;style=flat-square&amp;label=SIGNALS%20RECEIVED&amp;color=6e5d3a&amp;labelColor=11100f" alt="Live count of signals received by Entroversu" width="144" height="20"><span>Since 09 August 2026</span></div><div>Entroversu · Entropy · Universe · Music</div></footer>
+<footer><div class="cosmic-counters"><div class="entity-counter" data-entities-counter data-endpoint="https://entroversu-entities.entities-counter.workers.dev" data-state="loading" title="Approximate unique browsers. No names or personal identifiers are stored."><div class="entity-badge"><span class="entity-label">Entities entered</span><span class="entity-value" data-entities-count aria-live="polite">…</span></div><span class="counter-note">Approximate unique visitors</span></div><div class="signal-counter"><img src="https://hits.sh/entroversu.com.svg?view=total&amp;style=flat-square&amp;label=SIGNALS%20RECEIVED&amp;color=6e5d3a&amp;labelColor=11100f" alt="Live count of signals received by Entroversu" width="144" height="20"><span class="counter-note">Since 09 August 2026</span></div></div><div>Entroversu · Entropy · Universe · Music</div></footer>
 </div>
+<script src="../../scripts/entities-counter.js"></script>
 </body>
 </html>
