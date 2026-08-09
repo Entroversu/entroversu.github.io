@@ -18,6 +18,7 @@ const albumLinks = [...homepage.matchAll(/class="album-detail-link" href="([^"]+
 assert(websiteSchema?.name === 'Entroversu', 'Homepage schema must describe the WebSite name.');
 assert(artistSchema?.album.length === 16, 'Homepage MusicGroup schema must contain 16 albums.');
 assert(albumLinks.length === 16, 'Homepage must contain 16 crawlable album links.');
+assert(homepage.includes("coverLink.className='album-cover-link'"), 'Homepage covers must link to their album pages.');
 assert((homepage.match(/<h3 class="album-title">/g) || []).length === 16, 'Homepage album titles must be h3 headings.');
 assert((homepage.match(/<source type="image\/webp"/g) || []).length === 16, 'Homepage must offer 16 WebP covers.');
 assert(!homepage.includes('meta name="keywords"'), 'Homepage must not contain obsolete meta keywords.');

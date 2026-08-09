@@ -66,15 +66,18 @@ body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backgr
 .album-card:hover{border-color:rgba(196,168,114,.6);transform:translateY(-4px);box-shadow:0 8px 32px rgba(196,168,114,.12)}
 .album-card:hover::before{opacity:1}
 .album-card picture{display:block}
+.album-cover-link{display:block;color:inherit;text-decoration:none;outline:none}
+.album-cover-link:focus-visible .album-cover,.album-cover-link:focus-visible .album-cover-placeholder{border-color:var(--accent);outline:1px solid var(--accent);outline-offset:3px}
 .album-cover{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;cursor:pointer;border:1px solid var(--border)}
 .album-cover-placeholder{width:100%;aspect-ratio:1;background:linear-gradient(135deg,#1a1918,#0d0d0c);display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border)}
 .album-cover-placeholder span{font-family:'Space Mono',monospace;font-size:2rem;color:var(--border)}
-.album-info{padding:1.2rem 0 0 0;cursor:pointer;display:flex;flex-direction:column;flex-grow:1;text-align:center}
+.album-info{padding:1.2rem 0 0 0;display:flex;flex-direction:column;flex-grow:1;text-align:center}
 .album-number{font-family:'Space Mono',monospace;font-size:.95rem;color:var(--accent);letter-spacing:.2em;margin-bottom:.6rem}
 .album-date{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--dim);letter-spacing:.1em;margin-bottom:.6rem}
 .album-title{font-size:1.15rem;font-weight:400;line-height:1.4;margin-bottom:.5rem;color:var(--text);transition:color .15s ease}
 .album-title:hover{color:var(--accent)}
 .album-detail-link{color:inherit;text-decoration:none}
+.album-detail-link:hover{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
 .album-detail-link:focus-visible{color:var(--accent);outline:1px solid var(--accent);outline-offset:.25rem}
 .album-genre{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:auto}
 .album-listen-wrap{align-self:center;margin-top:1rem;text-align:center}
@@ -736,6 +739,16 @@ function setAlbumCardOpen(card,open){
 document.querySelectorAll('.album-card').forEach((card,index)=>{
   const hint=card.querySelector('.album-expand-hint');
   const tracks=card.querySelector('.album-tracks');
+  const picture=card.querySelector('picture');
+  const detailLink=card.querySelector('.album-detail-link');
+  if(picture&&detailLink){
+    const coverLink=document.createElement('a');
+    coverLink.className='album-cover-link';
+    coverLink.href=detailLink.getAttribute('href');
+    coverLink.setAttribute('aria-label',`Open album page: ${detailLink.textContent.trim()}`);
+    picture.before(coverLink);
+    coverLink.append(picture);
+  }
   if(!hint||!tracks)return;
   const number=card.querySelector('.album-number')?.textContent.match(/\d+/)?.[0]||String(index+1);
   tracks.id=`album-tracks-${number}`;
@@ -744,6 +757,7 @@ document.querySelectorAll('.album-card').forEach((card,index)=>{
   hint.setAttribute('tabindex','0');
   hint.setAttribute('aria-expanded','false');
   hint.setAttribute('aria-controls',tracks.id);
+  hint.addEventListener('click',()=>setAlbumCardOpen(card,!card.classList.contains('open')));
   hint.addEventListener('keydown',event=>{
     if(event.key==='Enter'||event.key===' '){
       event.preventDefault();
@@ -777,15 +791,12 @@ document.querySelectorAll('.album-listen-wrap').forEach(wrap=>{
   });
 });
 
-// Album toggle on click, while preserving the direct listening links.
+// Close listening menus when clicking elsewhere. Cover/title navigation and
+// tracklist expansion are intentionally separate controls.
 document.addEventListener('click',function(e){
   if(!e.target.closest('.album-listen-wrap')){
     document.querySelectorAll('.album-listen-wrap.open').forEach(wrap=>setServiceMenuOpen(wrap,false));
   }
-  if(e.target.closest('a,button'))return;
-  const card=e.target.closest('.album-card');
-  const clickedArea=e.target.closest('.album-cover,.album-cover-placeholder,.album-info,.album-expand-hint');
-  if(card&&clickedArea)setAlbumCardOpen(card,!card.classList.contains('open'));
 });
 </script>
 </body>
