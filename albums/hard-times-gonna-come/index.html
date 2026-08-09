@@ -61,6 +61,9 @@ h1{font-size:clamp(2rem,5vw,4.2rem);font-weight:300;line-height:1.05;text-wrap:b
 .album-nav a:last-child{text-align:right}
 .album-nav a:hover,.album-nav a:focus-visible{color:var(--accent);outline:none}
 footer{text-align:center;color:var(--dim);font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:2rem}
+.signal-counter{display:flex;flex-direction:column;align-items:center;gap:.55rem;margin-bottom:1.2rem}
+.signal-counter img{display:block;width:auto;height:20px;opacity:.82}
+.signal-counter span{font-size:.55rem;letter-spacing:.16em}
 @media(max-width:760px){body{padding:1rem}.album{grid-template-columns:1fr}.tracks{grid-column:auto}.tracks li{grid-template-columns:1.6rem 1fr}.isrc{grid-column:2}.album-nav{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -223,7 +226,7 @@ footer{text-align:center;color:var(--dim);font-family:'Space Mono',monospace;fon
 <a href="../riders-of-the-witching-hours/">Riders Of The Witching Hours →</a>
 </nav>
 </main>
-<footer>Entroversu · Entropy · Universe · Music</footer>
+<footer><div class="signal-counter"><img src="https://hits.sh/entroversu.com.svg?view=total&amp;style=flat-square&amp;label=SIGNALS%20RECEIVED&amp;color=6e5d3a&amp;labelColor=11100f" alt="Live count of signals received by Entroversu" width="144" height="20"><span>Since 09 August 2026</span></div><div>Entroversu · Entropy · Universe · Music</div></footer>
 </div>
 </body>
 </html>
