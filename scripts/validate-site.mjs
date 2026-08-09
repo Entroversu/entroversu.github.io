@@ -26,14 +26,17 @@ assert(homepage.includes('data-entities-counter'), 'Homepage entity counter is m
 assert(homepage.includes('scripts/entities-counter.js'), 'Homepage entity counter script is missing.');
 assert(homepage.includes('https://entroversu-entities.entities-counter.workers.dev'), 'Homepage entity counter endpoint is missing.');
 assert(!homepage.includes('ENTITY_COUNTER_ENDPOINT'), 'Homepage contains an undeployed entity counter placeholder.');
+assert(homepage.includes('30ba2461d6104a55a627df08e4112768'), 'Homepage Cloudflare Web Analytics token is missing.');
+assert(homepage.includes('href="privacy/"'), 'Homepage privacy link is missing.');
 assert(!homepage.includes('meta name="keywords"'), 'Homepage must not contain obsolete meta keywords.');
 
 const sitemap = read('sitemap.xml');
 const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/entroversu\.com\/[^<]*)<\/loc>/g)].map(match => match[1]);
 const sitemapImages = [...sitemap.matchAll(/<image:loc>(https:\/\/entroversu\.com\/[^<]*)<\/image:loc>/g)].map(match => match[1]);
-assert(sitemapUrls.length === 17, 'Sitemap must contain 17 page URLs.');
+assert(sitemapUrls.length === 18, 'Sitemap must contain 18 page URLs.');
 assert(sitemapImages.length === 17, 'Sitemap must contain 17 image URLs.');
-assert((sitemap.match(/<lastmod>2026-08-09<\/lastmod>/g) || []).length === 17, 'Every sitemap page needs the current lastmod date.');
+assert((sitemap.match(/<lastmod>2026-08-09<\/lastmod>/g) || []).length === 18, 'Every sitemap page needs the current lastmod date.');
+assert(sitemapUrls.includes('https://entroversu.com/privacy/'), 'Sitemap privacy URL is missing.');
 
 for (const link of albumLinks) {
   const relativePage = path.join(link.replace(/\/$/, ''), 'index.html');
@@ -59,13 +62,21 @@ for (const link of albumLinks) {
   assert(page.includes('data-entities-counter'), `${link}: entity counter is missing.`);
   assert(page.includes('../../scripts/entities-counter.js'), `${link}: entity counter script is missing.`);
   assert(page.includes('https://entroversu-entities.entities-counter.workers.dev'), `${link}: entity counter endpoint is missing.`);
+  assert(page.includes('30ba2461d6104a55a627df08e4112768'), `${link}: Cloudflare Web Analytics token is missing.`);
+  assert(page.includes('href="../../privacy/"'), `${link}: privacy link is missing.`);
   assert((page.match(/target="_blank" rel="noopener noreferrer"/g) || []).length === 3, `${link}: external link security attributes missing.`);
   assert(number && fs.existsSync(path.join(repoRoot, 'covers', `${number}.webp`)), `${link}: WebP cover missing.`);
 }
+
+const privacy = read('privacy/index.html');
+assert(privacy.includes('<link rel="canonical" href="https://entroversu.com/privacy/">'), 'Privacy canonical URL is missing.');
+assert(privacy.includes('30ba2461d6104a55a627df08e4112768'), 'Privacy Cloudflare Web Analytics token is missing.');
+assert(privacy.includes('Cloudflare Web Analytics'), 'Privacy analytics disclosure is missing.');
+assert(privacy.includes('hits.sh'), 'Privacy hits.sh disclosure is missing.');
 
 if (failures.length) {
   console.error(failures.map(message => `- ${message}`).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('Validated homepage, 16 album pages, 185 ISRC tracks, covers and sitemap.');
+  console.log('Validated homepage, privacy page, 16 album pages, 185 ISRC tracks, covers and sitemap.');
 }
