@@ -5,29 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Entroversu — Entropy · Universe · Music</title>
 <meta name="description" content="300 albums. 300 genres. One vision. A sonic experiment at the intersection of human vision and artificial sound. Est. December 2025, Switzerland.">
-<meta name="keywords" content="Entroversu, AI music, experimental music, 300 genres, sonic experiment, AI-assisted music production, Swiss music project, entropy universe music">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Entroversu">
 <meta property="og:title" content="Entroversu — Entropy · Universe · Music">
 <meta property="og:description" content="300 albums. 300 genres. One vision. A curated space at the intersection of human vision and artificial sound.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://entroversu.com">
+<meta property="og:url" content="https://entroversu.com/">
 <meta property="og:image" content="https://entroversu.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Entroversu — Entropy · Universe · Music">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Entroversu">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Entroversu — Entropy · Universe · Music">
 <meta name="twitter:description" content="300 albums. 300 genres. One vision. A sonic experiment at the intersection of human vision and artificial sound.">
 <meta name="twitter:image" content="https://entroversu.com/og-image.png">
-<link rel="canonical" href="https://entroversu.com">
+<meta name="twitter:image:alt" content="Entroversu — Entropy · Universe · Music">
+<link rel="canonical" href="https://entroversu.com/">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0a0a;--text:#e8e4df;--accent:#c4a872;--dim:#928c84;--card-bg:rgba(17,17,16,.85);--border:#2d2b28}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;color-scheme:dark}
 body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden;min-height:100vh}
 #cosmos{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
 .content{position:relative;z-index:1}
@@ -60,6 +65,7 @@ body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backgr
 .album-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .4s ease;z-index:2}
 .album-card:hover{border-color:rgba(196,168,114,.6);transform:translateY(-4px);box-shadow:0 8px 32px rgba(196,168,114,.12)}
 .album-card:hover::before{opacity:1}
+.album-card picture{display:block}
 .album-cover{width:100%;aspect-ratio:1;object-fit:cover;display:block;cursor:pointer;border:1px solid var(--border)}
 .album-cover-placeholder{width:100%;aspect-ratio:1;background:linear-gradient(135deg,#1a1918,#0d0d0c);display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border)}
 .album-cover-placeholder span{font-family:'Space Mono',monospace;font-size:2rem;color:var(--border)}
@@ -68,6 +74,8 @@ body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backgr
 .album-date{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--dim);letter-spacing:.1em;margin-bottom:.6rem}
 .album-title{font-size:1.15rem;font-weight:400;line-height:1.4;margin-bottom:.5rem;color:var(--text);transition:color .15s ease}
 .album-title:hover{color:var(--accent)}
+.album-detail-link{color:inherit;text-decoration:none}
+.album-detail-link:focus-visible{color:var(--accent);outline:1px solid var(--accent);outline-offset:.25rem}
 .album-genre{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:auto}
 .album-listen-wrap{align-self:center;margin-top:1rem;text-align:center}
 .album-listen-toggle{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);background:transparent;padding:.45rem .75rem;border:1px solid rgba(196,168,114,.35);cursor:pointer;transition:color .2s ease,border-color .2s ease,background .2s ease}
@@ -120,150 +128,363 @@ footer .origin{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-styl
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  "name": "Entroversu",
-  "url": "https://entroversu.com",
-  "description": "300 albums. 300 genres. One vision. A sonic experiment at the intersection of human vision and artificial sound.",
-  "foundingDate": "2025-12",
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Switzerland"
-  },
-  "genre": ["Experimental", "AI-assisted Music", "Cross-genre"],
-  "sameAs": [
-    "https://open.spotify.com/artist/7htQtZU5SzBfbaLKAZ4cMu",
-    "https://music.apple.com/us/artist/entroversu/1860770727",
-    "https://music.amazon.de/artists/B0G6JSWMXQ/entroversu",
-    "https://www.youtube.com/@Entroversu"
-  ],
-  "album": [
+  "@graph": [
     {
-      "@type": "MusicAlbum",
-      "name": "Deadly Elegant Midnight Jive",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2025-12-12",
-      "genre": "30s and 40s Doom Jazz Swing",
-      "numTracks": 14
+      "@type": "WebSite",
+      "@id": "https://entroversu.com/#website",
+      "url": "https://entroversu.com/",
+      "name": "Entroversu",
+      "alternateName": "EntroVersU",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://entroversu.com/#artist"
+      }
     },
     {
-      "@type": "MusicAlbum",
-      "name": "Loving Bittersweet Tears of Broken Velvet Hearts",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2025-12-14",
-      "genre": "Sad Dreamy Love Melancholia",
-      "numTracks": 16
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "The Alone Garage Boogie Volume",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2025-12-26",
-      "genre": "Alone Garage Boogie",
-      "numTracks": 13
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Dark Forgotten Lonely Lullabies",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2025-12-30",
-      "genre": "Dark Nihilistic Cabaretish",
-      "numTracks": 11
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Babe You Can't Fool Me Anymore",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-01-06",
-      "genre": "Proto Punk Rock",
-      "numTracks": 11
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Try It and Take It",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-01-17",
-      "genre": "Hard Rock",
-      "numTracks": 12
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Hard Times Gonna Come",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-01-26",
-      "genre": "Blues",
-      "numTracks": 10
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Riders Of The Witching Hours",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-01-27",
-      "genre": "Witch Western House",
-      "numTracks": 13
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "We Are Here Right Now",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-02-04",
-      "genre": "Voodoo Polka Party",
-      "numTracks": 10
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Where Home Once Was",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-03-20",
-      "genre": "Dark English Alpine Yodel Folk",
-      "numTracks": 13
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "The Day After Cosmic Suicide",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-03-21",
-      "genre": "Psychedelic Dream Pop",
-      "numTracks": 9
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "The Old Ones Gone And The New Ones Begins",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-04-03",
-      "genre": "Hazy Medieval Pop Folk",
-      "numTracks": 10
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Odyssey Of A Wild Ride",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-04-11",
-      "genre": "Raw Fuzz Acid Doomer Rock",
-      "numTracks": 11
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Space Pirates Of The Seven Galaxies",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-04-21",
-      "genre": "Galactic Retro Cosmic Space Shanties",
-      "numTracks": 11
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Take Me Home, Cherry Doom",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-05-10",
-      "genre": "Melancholic Doomer Fuzzgaze Psychdeath Romance",
-      "numTracks": 9
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Queens Of The Electric Twelve Realms",
-      "albumProductionType": "StudioAlbum",
-      "datePublished": "2026-05-23",
-      "genre": "Hardsoul Garage Rock 68 Style",
-      "numTracks": 12
+      "@type": "MusicGroup",
+      "@id": "https://entroversu.com/#artist",
+      "name": "Entroversu",
+      "url": "https://entroversu.com/",
+      "image": "https://entroversu.com/og-image.png",
+      "description": "300 albums. 300 genres. One vision. A sonic experiment at the intersection of human vision and artificial sound.",
+      "foundingDate": "2025-12",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Switzerland"
+      },
+      "genre": [
+        "Experimental",
+        "AI-assisted Music",
+        "Cross-genre"
+      ],
+      "sameAs": [
+        "https://open.spotify.com/artist/7htQtZU5SzBfbaLKAZ4cMu",
+        "https://music.apple.com/us/artist/entroversu/1860770727",
+        "https://music.amazon.de/artists/B0G6JSWMXQ/entroversu",
+        "https://www.youtube.com/@Entroversu"
+      ],
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/deadly-elegant-midnight-jive/#album",
+          "name": "Deadly Elegant Midnight Jive",
+          "url": "https://entroversu.com/albums/deadly-elegant-midnight-jive/",
+          "image": "https://entroversu.com/covers/001.jpg",
+          "datePublished": "2025-12-12",
+          "genre": "30s and 40s Doom Jazz Swing",
+          "numTracks": 14,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/1IsffASSnaxVLhYLfGAkcv",
+            "https://music.apple.com/us/album/deadly-elegant-midnight-jive/1860808213",
+            "https://www.youtube.com/playlist?list=OLAK5uy_m8-N82ZgdEdUi4zJyR_vno5-PsAycnkPY"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/loving-bittersweet-tears-of-broken-velvet-hearts/#album",
+          "name": "Loving Bittersweet Tears of Broken Velvet Hearts",
+          "url": "https://entroversu.com/albums/loving-bittersweet-tears-of-broken-velvet-hearts/",
+          "image": "https://entroversu.com/covers/002.jpg",
+          "datePublished": "2025-12-14",
+          "genre": "Sad Dreamy Love Melancholia",
+          "numTracks": 16,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/3o4NzyekeD4uURicyauCit",
+            "https://music.apple.com/us/album/loving-bittersweet-tears-of-broken-velvet-hearts/1861691809",
+            "https://www.youtube.com/playlist?list=OLAK5uy_l0xXUujbhao4lLfBGU1QddkPGxFx6o78E"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/the-alone-garage-boogie-volume/#album",
+          "name": "The Alone Garage Boogie Volume",
+          "url": "https://entroversu.com/albums/the-alone-garage-boogie-volume/",
+          "image": "https://entroversu.com/covers/003.jpg",
+          "datePublished": "2025-12-26",
+          "genre": "Alone Garage Boogie",
+          "numTracks": 13,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/09v9QTBzQUih74XHKGgwcZ",
+            "https://music.apple.com/us/album/the-alone-garage-boogie-volume/1864571560",
+            "https://www.youtube.com/playlist?list=OLAK5uy_n1u82ykZlZbUcsYwWxJfpssb3mywxQKjY"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/dark-forgotten-lonely-lullabies/#album",
+          "name": "Dark Forgotten Lonely Lullabies",
+          "url": "https://entroversu.com/albums/dark-forgotten-lonely-lullabies/",
+          "image": "https://entroversu.com/covers/004.jpg",
+          "datePublished": "2025-12-30",
+          "genre": "Dark Nihilistic Cabaretish",
+          "numTracks": 11,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/5YJLeRmvtB6sbB8OZVyHvu",
+            "https://music.apple.com/us/album/dark-forgotten-lonely-lullabies/1865375829",
+            "https://www.youtube.com/playlist?list=OLAK5uy_kisGrkYwEMe25l1n_bSlvoZ14guENjQpg"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/babe-you-cant-fool-me-anymore/#album",
+          "name": "Babe You Can't Fool Me Anymore",
+          "url": "https://entroversu.com/albums/babe-you-cant-fool-me-anymore/",
+          "image": "https://entroversu.com/covers/005.jpg",
+          "datePublished": "2026-01-06",
+          "genre": "Proto Punk Rock",
+          "numTracks": 11,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/59m5vaURGWUPbZCxQ6dNrP",
+            "https://music.apple.com/us/album/babe-you-cant-fool-me-anymore/1866889911",
+            "https://www.youtube.com/playlist?list=OLAK5uy_mgwDEI9gNKhBTXZEINd1HDRJMXBd0k8Kc"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/try-it-and-take-it/#album",
+          "name": "Try It and Take It",
+          "url": "https://entroversu.com/albums/try-it-and-take-it/",
+          "image": "https://entroversu.com/covers/006.jpg",
+          "datePublished": "2026-01-17",
+          "genre": "Hard Rock",
+          "numTracks": 12,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/3HLhoDMx1YmBdl0hVHafZM",
+            "https://music.apple.com/us/album/try-it-and-take-it/1869870123",
+            "https://www.youtube.com/playlist?list=OLAK5uy_k62NkJLPEaRaZ0HPpLULhgkPzkXRZ6Hk4"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/hard-times-gonna-come/#album",
+          "name": "Hard Times Gonna Come",
+          "url": "https://entroversu.com/albums/hard-times-gonna-come/",
+          "image": "https://entroversu.com/covers/007.jpg",
+          "datePublished": "2026-01-26",
+          "genre": "Blues",
+          "numTracks": 10,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/3mF3L4xNY6zxV7JPax9C8K",
+            "https://music.apple.com/us/album/hard-times-gonna-come/1872300818",
+            "https://www.youtube.com/playlist?list=OLAK5uy_kI9YJZEH24eFoXzbRznCCJyqqHk5sp4tM"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/riders-of-the-witching-hours/#album",
+          "name": "Riders Of The Witching Hours",
+          "url": "https://entroversu.com/albums/riders-of-the-witching-hours/",
+          "image": "https://entroversu.com/covers/008.jpg",
+          "datePublished": "2026-01-27",
+          "genre": "Witch Western House",
+          "numTracks": 13,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/4UjFMbqtJpmqkPthLIF8pz",
+            "https://music.apple.com/us/album/riders-of-the-witching-hours/1872662626",
+            "https://www.youtube.com/playlist?list=OLAK5uy_m_F0B-SXyLFr0WBCZk-B-krbIdsqZOq3I"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/we-are-here-right-now/#album",
+          "name": "We Are Here Right Now",
+          "url": "https://entroversu.com/albums/we-are-here-right-now/",
+          "image": "https://entroversu.com/covers/009.jpg",
+          "datePublished": "2026-02-04",
+          "genre": "Voodoo Polka Party",
+          "numTracks": 10,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/2DPPcKoKMaBaR3r3kBi3J3",
+            "https://music.apple.com/us/album/we-are-here-right-now/1874753579",
+            "https://www.youtube.com/playlist?list=OLAK5uy_k4AQ8DN3-1C-oNVHVRlBM6_puymvCiRu0"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/where-home-once-was/#album",
+          "name": "Where Home Once Was",
+          "url": "https://entroversu.com/albums/where-home-once-was/",
+          "image": "https://entroversu.com/covers/010.jpg",
+          "datePublished": "2026-03-20",
+          "genre": "Dark English Alpine Yodel Folk",
+          "numTracks": 13,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/5WxoJTh5ZSEoVmaEWnmvUK",
+            "https://music.apple.com/us/album/where-home-once-was/1887366249",
+            "https://www.youtube.com/playlist?list=OLAK5uy_mNubDIM3MBZsDKrGyUhKYMuSXz-Su1MIc"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/the-day-after-cosmic-suicide/#album",
+          "name": "The Day After Cosmic Suicide",
+          "url": "https://entroversu.com/albums/the-day-after-cosmic-suicide/",
+          "image": "https://entroversu.com/covers/011.jpg",
+          "datePublished": "2026-03-21",
+          "genre": "Psychedelic Dream Pop",
+          "numTracks": 9,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/4clBxDAoeE0GNnD2em3zc6",
+            "https://music.apple.com/us/album/the-day-after-cosmic-suicide/1886874277",
+            "https://www.youtube.com/playlist?list=OLAK5uy_mC2a7ODillfFjbpHcg0A60YzpeGRnBDgA"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/the-old-ones-gone-and-the-new-ones-begins/#album",
+          "name": "The Old Ones Gone And The New Ones Begins",
+          "url": "https://entroversu.com/albums/the-old-ones-gone-and-the-new-ones-begins/",
+          "image": "https://entroversu.com/covers/012.jpg",
+          "datePublished": "2026-04-03",
+          "genre": "Hazy Medieval Pop Folk",
+          "numTracks": 10,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/0Wjl6QaG1m6GQtS3ykN41F",
+            "https://music.apple.com/us/album/the-old-ones-gone-and-the-new-ones-begins/1890979734",
+            "https://www.youtube.com/playlist?list=OLAK5uy_m_2fpHIRtXdTJ89kJszCRKJjYyPCg3_mA"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/odyssey-of-a-wild-ride/#album",
+          "name": "Odyssey Of A Wild Ride",
+          "url": "https://entroversu.com/albums/odyssey-of-a-wild-ride/",
+          "image": "https://entroversu.com/covers/013.jpg",
+          "datePublished": "2026-04-11",
+          "genre": "Raw Fuzz Acid Doomer Rock",
+          "numTracks": 11,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/3WgOdgUWzE27LI6s5YgZZm",
+            "https://music.apple.com/us/album/odyssey-of-a-wild-ride/1893373536",
+            "https://www.youtube.com/playlist?list=OLAK5uy_ma3nsMGPbrt20rkK6sc889kqfsSrSVzN0"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/space-pirates-of-the-seven-galaxies/#album",
+          "name": "Space Pirates Of The Seven Galaxies",
+          "url": "https://entroversu.com/albums/space-pirates-of-the-seven-galaxies/",
+          "image": "https://entroversu.com/covers/014.jpg",
+          "datePublished": "2026-04-21",
+          "genre": "Galactic Retro Cosmic Space Shanties",
+          "numTracks": 11,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/10ypCuuzya0YrOPrXiNnGf",
+            "https://music.apple.com/us/album/space-pirates-of-the-seven-galaxies/1895513052",
+            "https://www.youtube.com/playlist?list=OLAK5uy_neyr3Ucb9pPzSjwcCYm71YjWUvUVp_p48"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/take-me-home-cherry-doom/#album",
+          "name": "Take Me Home, Cherry Doom",
+          "url": "https://entroversu.com/albums/take-me-home-cherry-doom/",
+          "image": "https://entroversu.com/covers/015.jpg",
+          "datePublished": "2026-05-10",
+          "genre": "Melancholic Doomer Fuzzgaze Psychdeath Romance",
+          "numTracks": 9,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/4KGb1EU6ZTezvMNGVvsQVY",
+            "https://music.apple.com/us/album/take-me-home-cherry-doom/6768145624",
+            "https://www.youtube.com/playlist?list=OLAK5uy_kiPoCwNxzJOhilzameIUhCxrNjFM25bxY"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://entroversu.com/albums/queens-of-the-electric-twelve-realms/#album",
+          "name": "Queens Of The Electric Twelve Realms",
+          "url": "https://entroversu.com/albums/queens-of-the-electric-twelve-realms/",
+          "image": "https://entroversu.com/covers/016.jpg",
+          "datePublished": "2026-05-23",
+          "genre": "Hardsoul Garage Rock 68 Style",
+          "numTracks": 12,
+          "albumProductionType": "https://schema.org/StudioAlbum",
+          "albumReleaseType": "https://schema.org/AlbumRelease",
+          "byArtist": {
+            "@id": "https://entroversu.com/#artist"
+          },
+          "sameAs": [
+            "https://open.spotify.com/album/207E39j0fvLa8O0hWrnRpF",
+            "https://music.apple.com/us/album/queens-of-the-electric-twelve-realms/6775335180",
+            "https://www.youtube.com/playlist?list=OLAK5uy_mLgtZUdmLtrGQLGVEOTH7qnNVv9OuwAXw"
+          ]
+        }
+      ]
     }
   ]
 }
@@ -301,98 +522,98 @@ footer .origin{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-styl
 <div class="albums-grid">
 
 <div class="album-card">
-<img class="album-cover" src="covers/001.jpg" alt="Album Cover: Deadly Elegant Midnight Jive - 30s and 40s Doom Jazz Swing" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>001</span></div>'">
-<div class="album-info"><div class="album-number">No. 001</div><div class="album-title">Deadly Elegant Midnight Jive</div><div class="album-date">12. December 2025</div><div class="album-genre">30s and 40s Doom Jazz Swing</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-001">Listen ↗</button><div class="album-services" id="album-services-001" aria-hidden="true"><a href="https://open.spotify.com/album/1IsffASSnaxVLhYLfGAkcv" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/deadly-elegant-midnight-jive/1860808213" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m8-N82ZgdEdUi4zJyR_vno5-PsAycnkPY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/001.webp"><img class="album-cover" src="covers/001.jpg" alt="Album Cover: Deadly Elegant Midnight Jive - 30s and 40s Doom Jazz Swing" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>001</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 001</div><h3 class="album-title"><a class="album-detail-link" href="albums/deadly-elegant-midnight-jive/">Deadly Elegant Midnight Jive</a></h3><div class="album-date">12. December 2025</div><div class="album-genre">30s and 40s Doom Jazz Swing</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-001">Listen ↗</button><div class="album-services" id="album-services-001" aria-hidden="true"><a href="https://open.spotify.com/album/1IsffASSnaxVLhYLfGAkcv" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/deadly-elegant-midnight-jive/1860808213" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m8-N82ZgdEdUi4zJyR_vno5-PsAycnkPY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Black Horizon</span><span class="track-isrc">QT6FL2597586</span></li><li><span class="track-num">2</span><span class="track-name">Beyond The End</span><span class="track-isrc">QT6FL2597587</span></li><li><span class="track-num">3</span><span class="track-name">Missy Death</span><span class="track-isrc">QT6FL2597588</span></li><li><span class="track-num">4</span><span class="track-name">Black Hound And The Reaper</span><span class="track-isrc">QT6FL2597589</span></li><li><span class="track-num">5</span><span class="track-name">Deadly Shadow's Walls</span><span class="track-isrc">QT6FL2597590</span></li><li><span class="track-num">6</span><span class="track-name">Knocking On Hell's Doors</span><span class="track-isrc">QT6FL2597592</span></li><li><span class="track-num">7</span><span class="track-name">Tommy Crossroads</span><span class="track-isrc">QT6FL2597593</span></li><li><span class="track-num">8</span><span class="track-name">Veil Of Black</span><span class="track-isrc">QT6FL2597594</span></li><li><span class="track-num">9</span><span class="track-name">Closing Hours</span><span class="track-isrc">QT6FL2597595</span></li><li><span class="track-num">10</span><span class="track-name">Pale White Lady</span><span class="track-isrc">QT6FL2597596</span></li><li><span class="track-num">11</span><span class="track-name">Ocean Of Oil</span><span class="track-isrc">QT6FL2597597</span></li><li><span class="track-num">12</span><span class="track-name">Misty Sailing</span><span class="track-isrc">QT6FL2597598</span></li><li><span class="track-num">13</span><span class="track-name">Devil And Angel</span><span class="track-isrc">QT6FL2597599</span></li><li><span class="track-num">14</span><span class="track-name">World Gone Black</span><span class="track-isrc">QT6FL2597600</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/002.jpg" alt="Album Cover: Loving Bittersweet Tears of Broken Velvet Hearts - Sad Dreamy Love Melancholia" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>002</span></div>'">
-<div class="album-info"><div class="album-number">No. 002</div><div class="album-title">Loving Bittersweet Tears of Broken Velvet Hearts</div><div class="album-date">14. December 2025</div><div class="album-genre">Sad Dreamy Love Melancholia</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-002">Listen ↗</button><div class="album-services" id="album-services-002" aria-hidden="true"><a href="https://open.spotify.com/album/3o4NzyekeD4uURicyauCit" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/loving-bittersweet-tears-of-broken-velvet-hearts/1861691809" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_l0xXUujbhao4lLfBGU1QddkPGxFx6o78E" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/002.webp"><img class="album-cover" src="covers/002.jpg" alt="Album Cover: Loving Bittersweet Tears of Broken Velvet Hearts - Sad Dreamy Love Melancholia" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>002</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 002</div><h3 class="album-title"><a class="album-detail-link" href="albums/loving-bittersweet-tears-of-broken-velvet-hearts/">Loving Bittersweet Tears of Broken Velvet Hearts</a></h3><div class="album-date">14. December 2025</div><div class="album-genre">Sad Dreamy Love Melancholia</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-002">Listen ↗</button><div class="album-services" id="album-services-002" aria-hidden="true"><a href="https://open.spotify.com/album/3o4NzyekeD4uURicyauCit" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/loving-bittersweet-tears-of-broken-velvet-hearts/1861691809" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_l0xXUujbhao4lLfBGU1QddkPGxFx6o78E" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">First Time We Meet</span><span class="track-isrc">QT6FY2560032</span></li><li><span class="track-num">2</span><span class="track-name">Don't Be Afraid Young Flower</span><span class="track-isrc">QT6FY2560033</span></li><li><span class="track-num">3</span><span class="track-name">Hold Me Tight</span><span class="track-isrc">QT6FY2560034</span></li><li><span class="track-num">4</span><span class="track-name">A Rose Needs Love</span><span class="track-isrc">QT6FY2560035</span></li><li><span class="track-num">5</span><span class="track-name">Lovers In Time</span><span class="track-isrc">QT6FY2560036</span></li><li><span class="track-num">6</span><span class="track-name">A Free Flying Bird</span><span class="track-isrc">QT6FY2560037</span></li><li><span class="track-num">7</span><span class="track-name">I'm Still Here, I'm Still Trying</span><span class="track-isrc">QT6FY2560038</span></li><li><span class="track-num">8</span><span class="track-name">Your Love Is Killing Me</span><span class="track-isrc">QT6FY2560039</span></li><li><span class="track-num">9</span><span class="track-name">Black And The End</span><span class="track-isrc">QT6FY2560040</span></li><li><span class="track-num">10</span><span class="track-name">Your Side Of The Bed</span><span class="track-isrc">QT6FY2560041</span></li><li><span class="track-num">11</span><span class="track-name">It Was A Lilac</span><span class="track-isrc">QT6FY2560042</span></li><li><span class="track-num">12</span><span class="track-name">Before It Goes</span><span class="track-isrc">QT6FY2560043</span></li><li><span class="track-num">13</span><span class="track-name">Dreamy Sunday Waltz</span><span class="track-isrc">QT6FY2560044</span></li><li><span class="track-num">14</span><span class="track-name">Phantom Summer</span><span class="track-isrc">QT6FY2560045</span></li><li><span class="track-num">15</span><span class="track-name">I Always Forget</span><span class="track-isrc">QT6FY2560046</span></li><li><span class="track-num">16</span><span class="track-name">Your Tears Are My Pain</span><span class="track-isrc">QT6FY2560047</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/003.jpg" alt="Album Cover: The Alone Garage Boogie Volume - Alone Garage Boogie" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>003</span></div>'">
-<div class="album-info"><div class="album-number">No. 003</div><div class="album-title">The Alone Garage Boogie Volume</div><div class="album-date">26. December 2025</div><div class="album-genre">Alone Garage Boogie</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-003">Listen ↗</button><div class="album-services" id="album-services-003" aria-hidden="true"><a href="https://open.spotify.com/album/09v9QTBzQUih74XHKGgwcZ" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-alone-garage-boogie-volume/1864571560" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_n1u82ykZlZbUcsYwWxJfpssb3mywxQKjY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/003.webp"><img class="album-cover" src="covers/003.jpg" alt="Album Cover: The Alone Garage Boogie Volume - Alone Garage Boogie" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>003</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 003</div><h3 class="album-title"><a class="album-detail-link" href="albums/the-alone-garage-boogie-volume/">The Alone Garage Boogie Volume</a></h3><div class="album-date">26. December 2025</div><div class="album-genre">Alone Garage Boogie</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-003">Listen ↗</button><div class="album-services" id="album-services-003" aria-hidden="true"><a href="https://open.spotify.com/album/09v9QTBzQUih74XHKGgwcZ" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-alone-garage-boogie-volume/1864571560" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_n1u82ykZlZbUcsYwWxJfpssb3mywxQKjY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">A Rose Needs Love</span><span class="track-isrc">QT6G92502481</span></li><li><span class="track-num">2</span><span class="track-name">Boardwalk By The Sea</span><span class="track-isrc">QT6G92502482</span></li><li><span class="track-num">3</span><span class="track-name">Wild Boogie On</span><span class="track-isrc">QT6G92502483</span></li><li><span class="track-num">4</span><span class="track-name">Together We Could Dream</span><span class="track-isrc">QT6G92502484</span></li><li><span class="track-num">5</span><span class="track-name">By That Tree</span><span class="track-isrc">QT6G92502486</span></li><li><span class="track-num">6</span><span class="track-name">Claudia</span><span class="track-isrc">QT6G92502487</span></li><li><span class="track-num">7</span><span class="track-name">Coastal Love, We Could Dream</span><span class="track-isrc">QT6G92502489</span></li><li><span class="track-num">8</span><span class="track-name">You Drift Away</span><span class="track-isrc">QT6G92502491</span></li><li><span class="track-num">9</span><span class="track-name">See Us Again</span><span class="track-isrc">QT6G92502492</span></li><li><span class="track-num">10</span><span class="track-name">Dancing In The Dark</span><span class="track-isrc">QT6G92502493</span></li><li><span class="track-num">11</span><span class="track-name">Come On Until We Are Dizzy</span><span class="track-isrc">QT6G92502494</span></li><li><span class="track-num">12</span><span class="track-name">Wild Loving Fire Boogie Woogie</span><span class="track-isrc">QT6G92502495</span></li><li><span class="track-num">13</span><span class="track-name">That's All We Need</span><span class="track-isrc">QT6G92502496</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/004.jpg" alt="Album Cover: Dark Forgotten Lonely Lullabies - Dark Nihilistic Cabaretish" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>004</span></div>'">
-<div class="album-info"><div class="album-number">No. 004</div><div class="album-title">Dark Forgotten Lonely Lullabies</div><div class="album-date">30. December 2025</div><div class="album-genre">Dark Nihilistic Cabaretish</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-004">Listen ↗</button><div class="album-services" id="album-services-004" aria-hidden="true"><a href="https://open.spotify.com/album/5YJLeRmvtB6sbB8OZVyHvu" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/dark-forgotten-lonely-lullabies/1865375829" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kisGrkYwEMe25l1n_bSlvoZ14guENjQpg" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/004.webp"><img class="album-cover" src="covers/004.jpg" alt="Album Cover: Dark Forgotten Lonely Lullabies - Dark Nihilistic Cabaretish" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>004</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 004</div><h3 class="album-title"><a class="album-detail-link" href="albums/dark-forgotten-lonely-lullabies/">Dark Forgotten Lonely Lullabies</a></h3><div class="album-date">30. December 2025</div><div class="album-genre">Dark Nihilistic Cabaretish</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-004">Listen ↗</button><div class="album-services" id="album-services-004" aria-hidden="true"><a href="https://open.spotify.com/album/5YJLeRmvtB6sbB8OZVyHvu" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/dark-forgotten-lonely-lullabies/1865375829" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kisGrkYwEMe25l1n_bSlvoZ14guENjQpg" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">The Deadly Love Lullaby</span><span class="track-isrc">QT6HK2557186</span></li><li><span class="track-num">2</span><span class="track-name">Nothing Matters</span><span class="track-isrc">QT6HK2557187</span></li><li><span class="track-num">3</span><span class="track-name">The World Is Ending</span><span class="track-isrc">QT6HK2557188</span></li><li><span class="track-num">4</span><span class="track-name">Fire Me Up</span><span class="track-isrc">QT6HK2557189</span></li><li><span class="track-num">5</span><span class="track-name">Blue Into Blue</span><span class="track-isrc">QT6HK2557190</span></li><li><span class="track-num">6</span><span class="track-name">I See Through You</span><span class="track-isrc">QT6HK2557191</span></li><li><span class="track-num">7</span><span class="track-name">Silver Thread</span><span class="track-isrc">QT6HK2557192</span></li><li><span class="track-num">8</span><span class="track-name">Colorless</span><span class="track-isrc">QT6HK2557193</span></li><li><span class="track-num">9</span><span class="track-name">Someone Else's Skin</span><span class="track-isrc">QT6HK2557194</span></li><li><span class="track-num">10</span><span class="track-name">Dollmaker</span><span class="track-isrc">QT6HK2557195</span></li><li><span class="track-num">11</span><span class="track-name">Take A Bow</span><span class="track-isrc">QT6HK2557196</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/005.jpg" alt="Album Cover: Babe You Cant Fool Me Anymore - Proto Punk Rock" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>005</span></div>'">
-<div class="album-info"><div class="album-number">No. 005</div><div class="album-title">Babe You Can't Fool Me Anymore</div><div class="album-date">6. January 2026</div><div class="album-genre">Proto Punk Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-005">Listen ↗</button><div class="album-services" id="album-services-005" aria-hidden="true"><a href="https://open.spotify.com/album/59m5vaURGWUPbZCxQ6dNrP" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/babe-you-cant-fool-me-anymore/1866889911" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mgwDEI9gNKhBTXZEINd1HDRJMXBd0k8Kc" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/005.webp"><img class="album-cover" src="covers/005.jpg" alt="Album Cover: Babe You Can&#39;t Fool Me Anymore - Proto Punk Rock" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>005</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 005</div><h3 class="album-title"><a class="album-detail-link" href="albums/babe-you-cant-fool-me-anymore/">Babe You Can't Fool Me Anymore</a></h3><div class="album-date">6. January 2026</div><div class="album-genre">Proto Punk Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-005">Listen ↗</button><div class="album-services" id="album-services-005" aria-hidden="true"><a href="https://open.spotify.com/album/59m5vaURGWUPbZCxQ6dNrP" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/babe-you-cant-fool-me-anymore/1866889911" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mgwDEI9gNKhBTXZEINd1HDRJMXBd0k8Kc" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">You Can't Fool Me</span><span class="track-isrc">QZF232662916</span></li><li><span class="track-num">2</span><span class="track-name">Baby Love Me Harder</span><span class="track-isrc">QZF232662917</span></li><li><span class="track-num">3</span><span class="track-name">You Won't Catch Me</span><span class="track-isrc">QZF232662918</span></li><li><span class="track-num">4</span><span class="track-name">Devil In You</span><span class="track-isrc">QZF232662919</span></li><li><span class="track-num">5</span><span class="track-name">Don't Hurt Me</span><span class="track-isrc">QZF232662920</span></li><li><span class="track-num">6</span><span class="track-name">Step On Me</span><span class="track-isrc">QZF232662921</span></li><li><span class="track-num">7</span><span class="track-name">Wild Eyes</span><span class="track-isrc">QZF232662922</span></li><li><span class="track-num">8</span><span class="track-name">Heartbreaker</span><span class="track-isrc">QZF232662923</span></li><li><span class="track-num">9</span><span class="track-name">Keep On Going</span><span class="track-isrc">QZF232662924</span></li><li><span class="track-num">10</span><span class="track-name">Leave Me Not Alone</span><span class="track-isrc">QZF232662925</span></li><li><span class="track-num">11</span><span class="track-name">Queen of Midnight</span><span class="track-isrc">QZF232662926</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/006.jpg" alt="Album Cover: Try It and Take It - Hard Rock" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>006</span></div>'">
-<div class="album-info"><div class="album-number">No. 006</div><div class="album-title">Try It and Take It</div><div class="album-date">17. January 2026</div><div class="album-genre">Hard Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-006">Listen ↗</button><div class="album-services" id="album-services-006" aria-hidden="true"><a href="https://open.spotify.com/album/3HLhoDMx1YmBdl0hVHafZM" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/try-it-and-take-it/1869870123" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_k62NkJLPEaRaZ0HPpLULhgkPzkXRZ6Hk4" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/006.webp"><img class="album-cover" src="covers/006.jpg" alt="Album Cover: Try It and Take It - Hard Rock" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>006</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 006</div><h3 class="album-title"><a class="album-detail-link" href="albums/try-it-and-take-it/">Try It and Take It</a></h3><div class="album-date">17. January 2026</div><div class="album-genre">Hard Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-006">Listen ↗</button><div class="album-services" id="album-services-006" aria-hidden="true"><a href="https://open.spotify.com/album/3HLhoDMx1YmBdl0hVHafZM" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/try-it-and-take-it/1869870123" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_k62NkJLPEaRaZ0HPpLULhgkPzkXRZ6Hk4" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">See What I've Become</span><span class="track-isrc">QZDA82613038</span></li><li><span class="track-num">2</span><span class="track-name">Heaven Collides</span><span class="track-isrc">QZDA82613039</span></li><li><span class="track-num">3</span><span class="track-name">If You Leave Me, Take Me</span><span class="track-isrc">QZDA82613040</span></li><li><span class="track-num">4</span><span class="track-name">Angel of Death</span><span class="track-isrc">QZDA82613041</span></li><li><span class="track-num">5</span><span class="track-name">Together Until The End</span><span class="track-isrc">QZDA82613042</span></li><li><span class="track-num">6</span><span class="track-name">The Devil I Know</span><span class="track-isrc">QZDA82613043</span></li><li><span class="track-num">7</span><span class="track-name">Lady Death</span><span class="track-isrc">QZDA82613044</span></li><li><span class="track-num">8</span><span class="track-name">Straight To Hell</span><span class="track-isrc">QZDA82613045</span></li><li><span class="track-num">9</span><span class="track-name">No One Comin' Home</span><span class="track-isrc">QZDA82613046</span></li><li><span class="track-num">10</span><span class="track-name">Doomsday</span><span class="track-isrc">QZDA82613047</span></li><li><span class="track-num">11</span><span class="track-name">There Will Be No One Left</span><span class="track-isrc">QZDA82613048</span></li><li><span class="track-num">12</span><span class="track-name">Falling Stars From The Sky</span><span class="track-isrc">QZDA82613049</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/007.jpg" alt="Album Cover: Hard Times Gonna Come - Blues" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>007</span></div>'">
-<div class="album-info"><div class="album-number">No. 007</div><div class="album-title">Hard Times Gonna Come</div><div class="album-date">26. January 2026</div><div class="album-genre">Blues</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-007">Listen ↗</button><div class="album-services" id="album-services-007" aria-hidden="true"><a href="https://open.spotify.com/album/3mF3L4xNY6zxV7JPax9C8K" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/hard-times-gonna-come/1872300818" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kI9YJZEH24eFoXzbRznCCJyqqHk5sp4tM" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/007.webp"><img class="album-cover" src="covers/007.jpg" alt="Album Cover: Hard Times Gonna Come - Blues" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>007</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 007</div><h3 class="album-title"><a class="album-detail-link" href="albums/hard-times-gonna-come/">Hard Times Gonna Come</a></h3><div class="album-date">26. January 2026</div><div class="album-genre">Blues</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-007">Listen ↗</button><div class="album-services" id="album-services-007" aria-hidden="true"><a href="https://open.spotify.com/album/3mF3L4xNY6zxV7JPax9C8K" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/hard-times-gonna-come/1872300818" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kI9YJZEH24eFoXzbRznCCJyqqHk5sp4tM" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Hard Time Gonna Come</span><span class="track-isrc">QZHN32692218</span></li><li><span class="track-num">2</span><span class="track-name">Black Cloud Coming Down</span><span class="track-isrc">QZHN32692219</span></li><li><span class="track-num">3</span><span class="track-name">Making A Deal With The Devil</span><span class="track-isrc">QZHN32692220</span></li><li><span class="track-num">4</span><span class="track-name">The Shadow And Me</span><span class="track-isrc">QZHN32692221</span></li><li><span class="track-num">5</span><span class="track-name">I'm A Railroad Man</span><span class="track-isrc">QZHN32692222</span></li><li><span class="track-num">6</span><span class="track-name">Blackhound Is On My Trail</span><span class="track-isrc">QZHN32692223</span></li><li><span class="track-num">7</span><span class="track-name">The Blue Collar Blues</span><span class="track-isrc">QZHN32692224</span></li><li><span class="track-num">8</span><span class="track-name">You're All I Have Left</span><span class="track-isrc">QZHN32692225</span></li><li><span class="track-num">9</span><span class="track-name">The Light Is Coming Closer</span><span class="track-isrc">QZHN32692226</span></li><li><span class="track-num">10</span><span class="track-name">See You Again On A Sunny Day</span><span class="track-isrc">QZHN32692227</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/008.jpg" alt="Album Cover: Riders Of The Witching Hours - Witch Western House" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>008</span></div>'">
-<div class="album-info"><div class="album-number">No. 008</div><div class="album-title">Riders Of The Witching Hours</div><div class="album-date">27. January 2026</div><div class="album-genre">Witch Western House</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-008">Listen ↗</button><div class="album-services" id="album-services-008" aria-hidden="true"><a href="https://open.spotify.com/album/4UjFMbqtJpmqkPthLIF8pz" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/riders-of-the-witching-hours/1872662626" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m_F0B-SXyLFr0WBCZk-B-krbIdsqZOq3I" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/008.webp"><img class="album-cover" src="covers/008.jpg" alt="Album Cover: Riders Of The Witching Hours - Witch Western House" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>008</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 008</div><h3 class="album-title"><a class="album-detail-link" href="albums/riders-of-the-witching-hours/">Riders Of The Witching Hours</a></h3><div class="album-date">27. January 2026</div><div class="album-genre">Witch Western House</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-008">Listen ↗</button><div class="album-services" id="album-services-008" aria-hidden="true"><a href="https://open.spotify.com/album/4UjFMbqtJpmqkPthLIF8pz" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/riders-of-the-witching-hours/1872662626" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m_F0B-SXyLFr0WBCZk-B-krbIdsqZOq3I" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">The Witching Highnoon</span><span class="track-isrc">QZHN42652197</span></li><li><span class="track-num">2</span><span class="track-name">Salem's Dark Revolver Lord</span><span class="track-isrc">QZHN42652198</span></li><li><span class="track-num">3</span><span class="track-name">The Bloody Earth</span><span class="track-isrc">QZHN42652199</span></li><li><span class="track-num">4</span><span class="track-name">The Queen Of Dark Obsessions</span><span class="track-isrc">QZHN42652200</span></li><li><span class="track-num">5</span><span class="track-name">She Was A Witch</span><span class="track-isrc">QZHN42652201</span></li><li><span class="track-num">6</span><span class="track-name">Hocus Pocus Popus</span><span class="track-isrc">QZHN42652202</span></li><li><span class="track-num">7</span><span class="track-name">Strange Eyes Forth Blue Fire</span><span class="track-isrc">QZHN42652203</span></li><li><span class="track-num">8</span><span class="track-name">The Dusty Witch Bloodpact</span><span class="track-isrc">QZHN42652204</span></li><li><span class="track-num">9</span><span class="track-name">Witch Queen Of Midnight</span><span class="track-isrc">QZHN42652205</span></li><li><span class="track-num">10</span><span class="track-name">My Cursed Amigo</span><span class="track-isrc">QZHN42652206</span></li><li><span class="track-num">11</span><span class="track-name">Salem's Coven's Revenge</span><span class="track-isrc">QZHN42652207</span></li><li><span class="track-num">12</span><span class="track-name">Rowena</span><span class="track-isrc">QZHN42652208</span></li><li><span class="track-num">13</span><span class="track-name">The Lost Witch Sister</span><span class="track-isrc">QZHN42652209</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/009.jpg" alt="Album Cover: We Are Here Right Now - Voodoo Polka Party" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>009</span></div>'">
-<div class="album-info"><div class="album-number">No. 009</div><div class="album-title">We Are Here Right Now</div><div class="album-date">4. February 2026</div><div class="album-genre">Voodoo Polka Party</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-009">Listen ↗</button><div class="album-services" id="album-services-009" aria-hidden="true"><a href="https://open.spotify.com/album/2DPPcKoKMaBaR3r3kBi3J3" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/we-are-here-right-now/1874753579" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_k4AQ8DN3-1C-oNVHVRlBM6_puymvCiRu0" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/009.webp"><img class="album-cover" src="covers/009.jpg" alt="Album Cover: We Are Here Right Now - Voodoo Polka Party" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>009</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 009</div><h3 class="album-title"><a class="album-detail-link" href="albums/we-are-here-right-now/">We Are Here Right Now</a></h3><div class="album-date">4. February 2026</div><div class="album-genre">Voodoo Polka Party</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-009">Listen ↗</button><div class="album-services" id="album-services-009" aria-hidden="true"><a href="https://open.spotify.com/album/2DPPcKoKMaBaR3r3kBi3J3" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/we-are-here-right-now/1874753579" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_k4AQ8DN3-1C-oNVHVRlBM6_puymvCiRu0" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Wild Polka Voodoo Party</span><span class="track-isrc">QZHNA2638574</span></li><li><span class="track-num">2</span><span class="track-name">Be My Voodoo Party Girl</span><span class="track-isrc">QZHNA2638575</span></li><li><span class="track-num">3</span><span class="track-name">Take Me By The Hand</span><span class="track-isrc">QZHNA2638576</span></li><li><span class="track-num">4</span><span class="track-name">The Polka Voodoo Queen</span><span class="track-isrc">QZHNA2638577</span></li><li><span class="track-num">5</span><span class="track-name">You Put A Spell On Me</span><span class="track-isrc">QZHNA2638578</span></li><li><span class="track-num">6</span><span class="track-name">Don't Let The Music Stop</span><span class="track-isrc">QZHNA2638579</span></li><li><span class="track-num">7</span><span class="track-name">The Last Dance Is Mine</span><span class="track-isrc">QZHNA2638580</span></li><li><span class="track-num">8</span><span class="track-name">Voodoo Child</span><span class="track-isrc">QZHNA2638581</span></li><li><span class="track-num">9</span><span class="track-name">Burn With Me</span><span class="track-isrc">QZHNA2638582</span></li><li><span class="track-num">10</span><span class="track-name">Mister Dancing Sinister</span><span class="track-isrc">QZHNA2638583</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/010.jpg" alt="Album Cover: Where Home Once Was - Dark English Alpine Yodel Folk" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>010</span></div>'">
-<div class="album-info"><div class="album-number">No. 010</div><div class="album-title">Where Home Once Was</div><div class="album-date">20. March 2026</div><div class="album-genre">Dark English Alpine Yodel Folk</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-010">Listen ↗</button><div class="album-services" id="album-services-010" aria-hidden="true"><a href="https://open.spotify.com/album/5WxoJTh5ZSEoVmaEWnmvUK" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/where-home-once-was/1887366249" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mNubDIM3MBZsDKrGyUhKYMuSXz-Su1MIc" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/010.webp"><img class="album-cover" src="covers/010.jpg" alt="Album Cover: Where Home Once Was - Dark English Alpine Yodel Folk" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>010</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 010</div><h3 class="album-title"><a class="album-detail-link" href="albums/where-home-once-was/">Where Home Once Was</a></h3><div class="album-date">20. March 2026</div><div class="album-genre">Dark English Alpine Yodel Folk</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-010">Listen ↗</button><div class="album-services" id="album-services-010" aria-hidden="true"><a href="https://open.spotify.com/album/5WxoJTh5ZSEoVmaEWnmvUK" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/where-home-once-was/1887366249" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mNubDIM3MBZsDKrGyUhKYMuSXz-Su1MIc" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">The Black Alpine Star</span><span class="track-isrc">QZTAX2640685</span></li><li><span class="track-num">2</span><span class="track-name">Where Home Once Was</span><span class="track-isrc">QZTAX2640686</span></li><li><span class="track-num">3</span><span class="track-name">Blue Eyes, Blue Sky</span><span class="track-isrc">QZTAX2640687</span></li><li><span class="track-num">4</span><span class="track-name">My Swiss Mountain Girl</span><span class="track-isrc">QZTAX2640688</span></li><li><span class="track-num">5</span><span class="track-name">My Austrian Beautiful Girl</span><span class="track-isrc">QZTAX2640689</span></li><li><span class="track-num">6</span><span class="track-name">My German Smiling Girl</span><span class="track-isrc">QZTAX2640690</span></li><li><span class="track-num">7</span><span class="track-name">In The Garden Of Life</span><span class="track-isrc">QZTAX2640691</span></li><li><span class="track-num">8</span><span class="track-name">It Was Last Summer</span><span class="track-isrc">QZTAX2640692</span></li><li><span class="track-num">9</span><span class="track-name">High Up In The Mountains</span><span class="track-isrc">QZTAX2640693</span></li><li><span class="track-num">10</span><span class="track-name">Home River Of Tears</span><span class="track-isrc">QZTAX2640694</span></li><li><span class="track-num">11</span><span class="track-name">Mountain Angel</span><span class="track-isrc">QZTAX2640695</span></li><li><span class="track-num">12</span><span class="track-name">The Lonely Sad Mountain Waltz</span><span class="track-isrc">QZTAX2640696</span></li><li><span class="track-num">13</span><span class="track-name">This Is The End (Black Flower)</span><span class="track-isrc">QZTAX2640697</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/011.jpg" alt="Album Cover: The Day After Cosmic Suicide - Psychedelic Dream Pop" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>011</span></div>'">
-<div class="album-info"><div class="album-number">No. 011</div><div class="album-title">The Day After Cosmic Suicide</div><div class="album-date">21. March 2026</div><div class="album-genre">Psychedelic Dream Pop</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-011">Listen ↗</button><div class="album-services" id="album-services-011" aria-hidden="true"><a href="https://open.spotify.com/album/4clBxDAoeE0GNnD2em3zc6" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-day-after-cosmic-suicide/1886874277" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mC2a7ODillfFjbpHcg0A60YzpeGRnBDgA" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/011.webp"><img class="album-cover" src="covers/011.jpg" alt="Album Cover: The Day After Cosmic Suicide - Psychedelic Dream Pop" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>011</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 011</div><h3 class="album-title"><a class="album-detail-link" href="albums/the-day-after-cosmic-suicide/">The Day After Cosmic Suicide</a></h3><div class="album-date">21. March 2026</div><div class="album-genre">Psychedelic Dream Pop</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-011">Listen ↗</button><div class="album-services" id="album-services-011" aria-hidden="true"><a href="https://open.spotify.com/album/4clBxDAoeE0GNnD2em3zc6" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-day-after-cosmic-suicide/1886874277" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mC2a7ODillfFjbpHcg0A60YzpeGRnBDgA" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Velvet Spiders Suicide</span><span class="track-isrc">QZTAR2602708</span></li><li><span class="track-num">2</span><span class="track-name">The Day After Tomorrow</span><span class="track-isrc">QZTAR2602709</span></li><li><span class="track-num">3</span><span class="track-name">Traveling Far To The Sun</span><span class="track-isrc">QZTAR2602710</span></li><li><span class="track-num">4</span><span class="track-name">Fusion Of Nuclear Lovers</span><span class="track-isrc">QZTAR2602711</span></li><li><span class="track-num">5</span><span class="track-name">Fading Memories Of Once Upon</span><span class="track-isrc">QZTAR2602712</span></li><li><span class="track-num">6</span><span class="track-name">Dead Man Orbiting</span><span class="track-isrc">QZTAR2602713</span></li><li><span class="track-num">7</span><span class="track-name">Floating Supernova</span><span class="track-isrc">QZTAR2602714</span></li><li><span class="track-num">8</span><span class="track-name">Let It Go</span><span class="track-isrc">QZTAR2602715</span></li><li><span class="track-num">9</span><span class="track-name">I Am The Cosmic Suicide</span><span class="track-isrc">QZTAR2602716</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/012.jpg" alt="Album Cover: The Old Ones Gone And The New Ones Begins - Hazy Medieval Pop Folk" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>012</span></div>'">
-<div class="album-info"><div class="album-number">No. 012</div><div class="album-title">The Old Ones Gone And The New Ones Begins</div><div class="album-date">3. April 2026</div><div class="album-genre">Hazy Medieval Pop Folk</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-012">Listen ↗</button><div class="album-services" id="album-services-012" aria-hidden="true"><a href="https://open.spotify.com/album/0Wjl6QaG1m6GQtS3ykN41F" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-old-ones-gone-and-the-new-ones-begins/1890979734" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m_2fpHIRtXdTJ89kJszCRKJjYyPCg3_mA" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/012.webp"><img class="album-cover" src="covers/012.jpg" alt="Album Cover: The Old Ones Gone And The New Ones Begins - Hazy Medieval Pop Folk" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>012</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 012</div><h3 class="album-title"><a class="album-detail-link" href="albums/the-old-ones-gone-and-the-new-ones-begins/">The Old Ones Gone And The New Ones Begins</a></h3><div class="album-date">3. April 2026</div><div class="album-genre">Hazy Medieval Pop Folk</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-012">Listen ↗</button><div class="album-services" id="album-services-012" aria-hidden="true"><a href="https://open.spotify.com/album/0Wjl6QaG1m6GQtS3ykN41F" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/the-old-ones-gone-and-the-new-ones-begins/1890979734" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_m_2fpHIRtXdTJ89kJszCRKJjYyPCg3_mA" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">The Hazy Sun</span><span class="track-isrc">QZTB82658459</span></li><li><span class="track-num">2</span><span class="track-name">Misty Marianne</span><span class="track-isrc">QZTB82658460</span></li><li><span class="track-num">3</span><span class="track-name">I Know My Love</span><span class="track-isrc">QZTB82658461</span></li><li><span class="track-num">4</span><span class="track-name">Golden Butterflies</span><span class="track-isrc">QZTB82658462</span></li><li><span class="track-num">5</span><span class="track-name">A Dream Of You And Me</span><span class="track-isrc">QZTB82658463</span></li><li><span class="track-num">6</span><span class="track-name">Maria</span><span class="track-isrc">QZTB82658464</span></li><li><span class="track-num">7</span><span class="track-name">Wildflower</span><span class="track-isrc">QZTB82658465</span></li><li><span class="track-num">8</span><span class="track-name">Lace Hearthside Waltz</span><span class="track-isrc">QZTB82658466</span></li><li><span class="track-num">9</span><span class="track-name">We Take A Walk Together</span><span class="track-isrc">QZTB82658467</span></li><li><span class="track-num">10</span><span class="track-name">The Old Ones Are Gone</span><span class="track-isrc">QZTB82658468</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/013.jpg" alt="Album Cover: Odyssey Of A Wild Ride - Raw Fuzz Acid Doomer Rock" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>013</span></div>'">
-<div class="album-info"><div class="album-number">No. 013</div><div class="album-title">Odyssey Of A Wild Ride</div><div class="album-date">11. April 2026</div><div class="album-genre">Raw Fuzz Acid Doomer Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-013">Listen ↗</button><div class="album-services" id="album-services-013" aria-hidden="true"><a href="https://open.spotify.com/album/3WgOdgUWzE27LI6s5YgZZm" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/odyssey-of-a-wild-ride/1893373536" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_ma3nsMGPbrt20rkK6sc889kqfsSrSVzN0" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/013.webp"><img class="album-cover" src="covers/013.jpg" alt="Album Cover: Odyssey Of A Wild Ride - Raw Fuzz Acid Doomer Rock" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>013</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 013</div><h3 class="album-title"><a class="album-detail-link" href="albums/odyssey-of-a-wild-ride/">Odyssey Of A Wild Ride</a></h3><div class="album-date">11. April 2026</div><div class="album-genre">Raw Fuzz Acid Doomer Rock</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-013">Listen ↗</button><div class="album-services" id="album-services-013" aria-hidden="true"><a href="https://open.spotify.com/album/3WgOdgUWzE27LI6s5YgZZm" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/odyssey-of-a-wild-ride/1893373536" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_ma3nsMGPbrt20rkK6sc889kqfsSrSVzN0" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Hun Banging The Drum</span><span class="track-isrc">QZMFF2641206</span></li><li><span class="track-num">2</span><span class="track-name">Ride And Crash With Me</span><span class="track-isrc">QZMFF2641207</span></li><li><span class="track-num">3</span><span class="track-name">Come To The Wolf</span><span class="track-isrc">QZMFF2641208</span></li><li><span class="track-num">4</span><span class="track-name">Surrender To The Queen</span><span class="track-isrc">QZMFF2641209</span></li><li><span class="track-num">5</span><span class="track-name">Unleash The Storm Across The Land</span><span class="track-isrc">QZMFF2641210</span></li><li><span class="track-num">6</span><span class="track-name">Radiation In My Blood</span><span class="track-isrc">QZMFF2641211</span></li><li><span class="track-num">7</span><span class="track-name">Burn Me Down Till The End</span><span class="track-isrc">QZMFF2641212</span></li><li><span class="track-num">8</span><span class="track-name">Hate What I Am, Call Me A Monster</span><span class="track-isrc">QZMFF2641213</span></li><li><span class="track-num">9</span><span class="track-name">Patient Man Waiting At The End</span><span class="track-isrc">QZMFF2641214</span></li><li><span class="track-num">10</span><span class="track-name">A Quiet Laughing Girl</span><span class="track-isrc">QZMFF2641215</span></li><li><span class="track-num">11</span><span class="track-name">Dead Men Tell No Sea Tales</span><span class="track-isrc">QZMFF2641216</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/014.jpg" alt="Album Cover: Space Pirates Of The Seven Galaxies - Galactic Retro Cosmic Space Shanties" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>014</span></div>'">
-<div class="album-info"><div class="album-number">No. 014</div><div class="album-title">Space Pirates Of The Seven Galaxies</div><div class="album-date">21. April 2026</div><div class="album-genre">Galactic Retro Cosmic Space Shanties</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-014">Listen ↗</button><div class="album-services" id="album-services-014" aria-hidden="true"><a href="https://open.spotify.com/album/10ypCuuzya0YrOPrXiNnGf" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/space-pirates-of-the-seven-galaxies/1895513052" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_neyr3Ucb9pPzSjwcCYm71YjWUvUVp_p48" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/014.webp"><img class="album-cover" src="covers/014.jpg" alt="Album Cover: Space Pirates Of The Seven Galaxies - Galactic Retro Cosmic Space Shanties" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>014</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 014</div><h3 class="album-title"><a class="album-detail-link" href="albums/space-pirates-of-the-seven-galaxies/">Space Pirates Of The Seven Galaxies</a></h3><div class="album-date">21. April 2026</div><div class="album-genre">Galactic Retro Cosmic Space Shanties</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-014">Listen ↗</button><div class="album-services" id="album-services-014" aria-hidden="true"><a href="https://open.spotify.com/album/10ypCuuzya0YrOPrXiNnGf" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/space-pirates-of-the-seven-galaxies/1895513052" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_neyr3Ucb9pPzSjwcCYm71YjWUvUVp_p48" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Treasure Map Of Seven Galaxies</span><span class="track-isrc">QZWFN2615798</span></li><li><span class="track-num">2</span><span class="track-name">This Rock Ain't My Home</span><span class="track-isrc">QZWFN2615801</span></li><li><span class="track-num">3</span><span class="track-name">Into The Black Cosmos</span><span class="track-isrc">QZWFN2615804</span></li><li><span class="track-num">4</span><span class="track-name">Space Pirates In The Sand</span><span class="track-isrc">QZWFN2615807</span></li><li><span class="track-num">5</span><span class="track-name">A Crew Of Strangers</span><span class="track-isrc">QZWFN2615809</span></li><li><span class="track-num">6</span><span class="track-name">Mystery From The Nebula</span><span class="track-isrc">QZWFN2615811</span></li><li><span class="track-num">7</span><span class="track-name">Galaxy Voyage Side By Side</span><span class="track-isrc">QZWFN2615813</span></li><li><span class="track-num">8</span><span class="track-name">The Beast Between Worlds</span><span class="track-isrc">QZWFN2615815</span></li><li><span class="track-num">9</span><span class="track-name">Snake Among The Stars</span><span class="track-isrc">QZWFN2615817</span></li><li><span class="track-num">10</span><span class="track-name">Drifting Through The Dark</span><span class="track-isrc">QZWFN2615819</span></li><li><span class="track-num">11</span><span class="track-name">The Treasure Was You</span><span class="track-isrc">QZWFN2615821</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/015.jpg" alt="Album Cover: Take Me Home, Cherry Doom - Melancholic Doomer Fuzzgaze Psychdeath Romance" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>015</span></div>'">
-<div class="album-info"><div class="album-number">No. 015</div><div class="album-title">Take Me Home, Cherry Doom</div><div class="album-date">10. May 2026</div><div class="album-genre">Melancholic Doomer Fuzzgaze Psychdeath Romance</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-015">Listen ↗</button><div class="album-services" id="album-services-015" aria-hidden="true"><a href="https://open.spotify.com/album/4KGb1EU6ZTezvMNGVvsQVY" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/take-me-home-cherry-doom/6768145624" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kiPoCwNxzJOhilzameIUhCxrNjFM25bxY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/015.webp"><img class="album-cover" src="covers/015.jpg" alt="Album Cover: Take Me Home, Cherry Doom - Melancholic Doomer Fuzzgaze Psychdeath Romance" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>015</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 015</div><h3 class="album-title"><a class="album-detail-link" href="albums/take-me-home-cherry-doom/">Take Me Home, Cherry Doom</a></h3><div class="album-date">10. May 2026</div><div class="album-genre">Melancholic Doomer Fuzzgaze Psychdeath Romance</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-015">Listen ↗</button><div class="album-services" id="album-services-015" aria-hidden="true"><a href="https://open.spotify.com/album/4KGb1EU6ZTezvMNGVvsQVY" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/take-me-home-cherry-doom/6768145624" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_kiPoCwNxzJOhilzameIUhCxrNjFM25bxY" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">Kiss Me While The Lights Go Out</span><span class="track-isrc">QZZ7K2630432</span></li><li><span class="track-num">2</span><span class="track-name">She Came Smiling Through The Door</span><span class="track-isrc">QZZ7K2630433</span></li><li><span class="track-num">3</span><span class="track-name">The Sky Got Sweet Like Red Sugar</span><span class="track-isrc">QZZ7K2630434</span></li><li><span class="track-num">4</span><span class="track-name">The Third Star Never Came</span><span class="track-isrc">QZZ7K2630435</span></li><li><span class="track-num">5</span><span class="track-name">Something Came Dancing Through The Dark</span><span class="track-isrc">QZZ7K2630436</span></li><li><span class="track-num">6</span><span class="track-name">Your Smile Was The Other Side</span><span class="track-isrc">QZZ7K2630437</span></li><li><span class="track-num">7</span><span class="track-name">Last Dance At The End Of Day</span><span class="track-isrc">QZZ7K2630438</span></li><li><span class="track-num">8</span><span class="track-name">One More Kiss Before The World Went...</span><span class="track-isrc">QZZ7K2630439</span></li><li><span class="track-num">9</span><span class="track-name">Take Me Home, Cherry Doom</span><span class="track-isrc">QZZ7K2630440</span></li></ol></div></div>
 
 <div class="album-card">
-<img class="album-cover" src="covers/016.jpg" alt="Album Cover: Queens Of The Electric Twelve Realms - Hardsoul Garage Rock 68 Style" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>016</span></div>'">
-<div class="album-info"><div class="album-number">No. 016</div><div class="album-title">Queens Of The Electric Twelve Realms</div><div class="album-date">23. May 2026</div><div class="album-genre">Hardsoul Garage Rock 68 Style</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-016">Listen ↗</button><div class="album-services" id="album-services-016" aria-hidden="true"><a href="https://open.spotify.com/album/207E39j0fvLa8O0hWrnRpF" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/queens-of-the-electric-twelve-realms/6775335180" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mLgtZUdmLtrGQLGVEOTH7qnNVv9OuwAXw" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
+<picture><source type="image/webp" srcset="covers/016.webp"><img class="album-cover" src="covers/016.jpg" alt="Album Cover: Queens Of The Electric Twelve Realms - Hardsoul Garage Rock 68 Style" width="500" height="500" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\'album-cover-placeholder\'><span>016</span></div>'"></picture>
+<div class="album-info"><div class="album-number">No. 016</div><h3 class="album-title"><a class="album-detail-link" href="albums/queens-of-the-electric-twelve-realms/">Queens Of The Electric Twelve Realms</a></h3><div class="album-date">23. May 2026</div><div class="album-genre">Hardsoul Garage Rock 68 Style</div><div class="album-listen-wrap"><button class="album-listen-toggle" type="button" aria-expanded="false" aria-controls="album-services-016">Listen ↗</button><div class="album-services" id="album-services-016" aria-hidden="true"><a href="https://open.spotify.com/album/207E39j0fvLa8O0hWrnRpF" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://music.apple.com/us/album/queens-of-the-electric-twelve-realms/6775335180" target="_blank" rel="noopener noreferrer">Apple</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_mLgtZUdmLtrGQLGVEOTH7qnNVv9OuwAXw" target="_blank" rel="noopener noreferrer">YouTube</a></div></div></div>
 <div class="album-expand-hint">▼ TRACKLIST</div>
 <div class="album-tracks"><ol><li><span class="track-num">1</span><span class="track-name">The Burning Captain Of Unknown Destiny</span><span class="track-isrc">QZZ7X2687645</span></li><li><span class="track-num">2</span><span class="track-name">A Handsome Cosmic Girl</span><span class="track-isrc">QZZ7X2687646</span></li><li><span class="track-num">3</span><span class="track-name">Helvetia Fire Mountain Goddess</span><span class="track-isrc">QZZ7X2687647</span></li><li><span class="track-num">4</span><span class="track-name">Witch In A Earth Corset</span><span class="track-isrc">QZZ7X2687648</span></li><li><span class="track-num">5</span><span class="track-name">Lady Lazarus Riding The Rose Winds</span><span class="track-isrc">QZZ7X2687649</span></li><li><span class="track-num">6</span><span class="track-name">Woman Loving Organ Blues</span><span class="track-isrc">QZZ7X2687650</span></li><li><span class="track-num">7</span><span class="track-name">Electric Mistress Kiss The Light</span><span class="track-isrc">QZZ7X2687651</span></li><li><span class="track-num">8</span><span class="track-name">Agent Violet Venom In Her Blood</span><span class="track-isrc">QZZ7X2687652</span></li><li><span class="track-num">9</span><span class="track-name">Mother Nature Crushing Down</span><span class="track-isrc">QZZ7X2687653</span></li><li><span class="track-num">10</span><span class="track-name">Dark Actress Calling My Name</span><span class="track-isrc">QZZ7X2687654</span></li><li><span class="track-num">11</span><span class="track-name">She Rode The Sun Into Oblivion</span><span class="track-isrc">QZZ7X2687655</span></li><li><span class="track-num">12</span><span class="track-name">Queen Of The Electric Twelve Realms</span><span class="track-isrc">QZZ7X2687656</span></li></ol></div></div>
 
@@ -450,14 +671,16 @@ const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches
 function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight}
 window.addEventListener('resize',resize);resize();
 
+const compactCanvas=window.matchMedia('(max-width: 600px)').matches;
+
 // Stars
-for(let i=0;i<200;i++){stars.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*1.5+.3,a:Math.random(),speed:Math.random()*.15+.02,pulse:Math.random()*Math.PI*2})}
+for(let i=0;i<(compactCanvas?120:200);i++){stars.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*1.5+.3,a:Math.random(),speed:Math.random()*.15+.02,pulse:Math.random()*Math.PI*2})}
 
 // Nebula blobs
-for(let i=0;i<8;i++){nebulae.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*300+150,a:Math.random()*.03+.01,speed:Math.random()*.1+.02,hue:35+Math.random()*15})}
+for(let i=0;i<(compactCanvas?5:8);i++){nebulae.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*300+150,a:Math.random()*.03+.01,speed:Math.random()*.1+.02,hue:35+Math.random()*15})}
 
 // Entropy particles
-for(let i=0;i<60;i++){entropy.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*2+.5,a:Math.random()*.6,speed:Math.random()*.3+.05,drift:Math.random()*2-1,life:Math.random(),decay:Math.random()*.002+.001})}
+for(let i=0;i<(compactCanvas?35:60);i++){entropy.push({x:Math.random()*w,y:Math.random()*h*5,r:Math.random()*2+.5,a:Math.random()*.6,speed:Math.random()*.3+.05,drift:Math.random()*2-1,life:Math.random(),decay:Math.random()*.002+.001})}
 
 function draw(){
 ctx.clearRect(0,0,w,h);

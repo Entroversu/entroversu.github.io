@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://entroversu.com/</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/og-image.png</image:loc>
+      <image:title>Entroversu — Entropy · Universe · Music</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/deadly-elegant-midnight-jive/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/001.jpg</image:loc>
+      <image:title>Deadly Elegant Midnight Jive — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/loving-bittersweet-tears-of-broken-velvet-hearts/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/002.jpg</image:loc>
+      <image:title>Loving Bittersweet Tears of Broken Velvet Hearts — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/the-alone-garage-boogie-volume/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/003.jpg</image:loc>
+      <image:title>The Alone Garage Boogie Volume — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/dark-forgotten-lonely-lullabies/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/004.jpg</image:loc>
+      <image:title>Dark Forgotten Lonely Lullabies — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/babe-you-cant-fool-me-anymore/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/005.jpg</image:loc>
+      <image:title>Babe You Can&#39;t Fool Me Anymore — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/try-it-and-take-it/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/006.jpg</image:loc>
+      <image:title>Try It and Take It — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/hard-times-gonna-come/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/007.jpg</image:loc>
+      <image:title>Hard Times Gonna Come — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/riders-of-the-witching-hours/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/008.jpg</image:loc>
+      <image:title>Riders Of The Witching Hours — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/we-are-here-right-now/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/009.jpg</image:loc>
+      <image:title>We Are Here Right Now — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/where-home-once-was/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/010.jpg</image:loc>
+      <image:title>Where Home Once Was — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/the-day-after-cosmic-suicide/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/011.jpg</image:loc>
+      <image:title>The Day After Cosmic Suicide — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/the-old-ones-gone-and-the-new-ones-begins/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/012.jpg</image:loc>
+      <image:title>The Old Ones Gone And The New Ones Begins — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/odyssey-of-a-wild-ride/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/013.jpg</image:loc>
+      <image:title>Odyssey Of A Wild Ride — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/space-pirates-of-the-seven-galaxies/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/014.jpg</image:loc>
+      <image:title>Space Pirates Of The Seven Galaxies — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/take-me-home-cherry-doom/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/015.jpg</image:loc>
+      <image:title>Take Me Home, Cherry Doom — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/queens-of-the-electric-twelve-realms/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/016.jpg</image:loc>
+      <image:title>Queens Of The Electric Twelve Realms — Entroversu</image:title>
+    </image:image>
   </url>
 </urlset>
