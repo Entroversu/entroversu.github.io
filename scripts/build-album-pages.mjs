@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const indexPath = path.join(repoRoot, 'index.html');
 const siteUrl = 'https://entroversu.com';
-const lastModified = '2026-08-09';
+const lastModified = '2026-10-09';
+const previousSitemap = fs.readFileSync(path.join(repoRoot, 'sitemap.xml'), 'utf8');
+const previousDates = new Map([...previousSitemap.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)].map(match => [match[1], match[2]]));
 
 const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
@@ -87,7 +89,7 @@ for (let index = 0; index < lines.length; index += 1) {
   );
 }
 
-if (albums.length !== 16) throw new Error(`Expected 16 albums, found ${albums.length}.`);
+if (albums.length !== 18) throw new Error(`Expected 18 albums, found ${albums.length}.`);
 
 const artistId = `${siteUrl}/#artist`;
 const artistSchema = {
@@ -302,13 +304,16 @@ ${next ? `<a href="../${next.slug}/">${escapeHtml(next.title)} →</a>` : '<span
 
   const outputDir = path.join(repoRoot, 'albums', album.slug);
   fs.mkdirSync(outputDir, { recursive: true });
-  fs.writeFileSync(path.join(outputDir, 'index.html'), page, 'utf8');
+  const outputPath = path.join(outputDir, 'index.html');
+  const changed = !fs.existsSync(outputPath) || fs.readFileSync(outputPath, 'utf8').replaceAll('\r\n', '\n') !== page.replaceAll('\r\n', '\n');
+  album.lastModified = changed ? lastModified : (previousDates.get(album.url) || lastModified);
+  fs.writeFileSync(outputPath, page, 'utf8');
 });
 
 const sitemapEntries = [
   `  <url>\n    <loc>${siteUrl}/</loc>\n    <lastmod>${lastModified}</lastmod>\n    <image:image>\n      <image:loc>${siteUrl}/og-image.png</image:loc>\n      <image:title>Entroversu — Entropy · Universe · Music</image:title>\n    </image:image>\n  </url>`,
-  `  <url>\n    <loc>${siteUrl}/privacy/</loc>\n    <lastmod>${lastModified}</lastmod>\n  </url>`,
-  ...albums.map(album => `  <url>\n    <loc>${album.url}</loc>\n    <lastmod>${lastModified}</lastmod>\n    <image:image>\n      <image:loc>${album.image}</image:loc>\n      <image:title>${escapeXml(album.title)} — Entroversu</image:title>\n    </image:image>\n  </url>`),
+  `  <url>\n    <loc>${siteUrl}/privacy/</loc>\n    <lastmod>${previousDates.get(`${siteUrl}/privacy/`) || lastModified}</lastmod>\n  </url>`,
+  ...albums.map(album => `  <url>\n    <loc>${album.url}</loc>\n    <lastmod>${album.lastModified}</lastmod>\n    <image:image>\n      <image:loc>${album.image}</image:loc>\n      <image:title>${escapeXml(album.title)} — Entroversu</image:title>\n    </image:image>\n  </url>`),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">

@@ -16,11 +16,11 @@ const websiteSchema = homepageSchema['@graph']?.find(item => item['@type'] === '
 const artistSchema = homepageSchema['@graph']?.find(item => item['@type'] === 'MusicGroup');
 const albumLinks = [...homepage.matchAll(/class="album-detail-link" href="([^"]+)"/g)].map(match => match[1]);
 assert(websiteSchema?.name === 'Entroversu', 'Homepage schema must describe the WebSite name.');
-assert(artistSchema?.album.length === 16, 'Homepage MusicGroup schema must contain 16 albums.');
-assert(albumLinks.length === 16, 'Homepage must contain 16 crawlable album links.');
+assert(artistSchema?.album.length === 18, 'Homepage MusicGroup schema must contain 18 albums.');
+assert(albumLinks.length === 18, 'Homepage must contain 18 crawlable album links.');
 assert(homepage.includes("coverLink.className='album-cover-link'"), 'Homepage covers must link to their album pages.');
-assert((homepage.match(/<h3 class="album-title">/g) || []).length === 16, 'Homepage album titles must be h3 headings.');
-assert((homepage.match(/<source type="image\/webp"/g) || []).length === 16, 'Homepage must offer 16 WebP covers.');
+assert((homepage.match(/<h3 class="album-title">/g) || []).length === 18, 'Homepage album titles must be h3 headings.');
+assert((homepage.match(/<source type="image\/webp"/g) || []).length === 18, 'Homepage must offer 18 WebP covers.');
 assert(homepage.includes('https://hits.sh/entroversu.com.svg'), 'Homepage signal counter is missing.');
 assert(homepage.includes('data-entities-counter'), 'Homepage entity counter is missing.');
 assert(homepage.includes('scripts/entities-counter.js'), 'Homepage entity counter script is missing.');
@@ -33,9 +33,9 @@ assert(!homepage.includes('meta name="keywords"'), 'Homepage must not contain ob
 const sitemap = read('sitemap.xml');
 const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/entroversu\.com\/[^<]*)<\/loc>/g)].map(match => match[1]);
 const sitemapImages = [...sitemap.matchAll(/<image:loc>(https:\/\/entroversu\.com\/[^<]*)<\/image:loc>/g)].map(match => match[1]);
-assert(sitemapUrls.length === 18, 'Sitemap must contain 18 page URLs.');
-assert(sitemapImages.length === 17, 'Sitemap must contain 17 image URLs.');
-assert((sitemap.match(/<lastmod>2026-08-09<\/lastmod>/g) || []).length === 18, 'Every sitemap page needs the current lastmod date.');
+assert(sitemapUrls.length === 20, 'Sitemap must contain 20 page URLs.');
+assert(sitemapImages.length === 19, 'Sitemap must contain 19 image URLs.');
+assert((sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length === 20, 'Every sitemap page needs a lastmod date.');
 assert(sitemapUrls.includes('https://entroversu.com/privacy/'), 'Sitemap privacy URL is missing.');
 
 for (const link of albumLinks) {
@@ -78,5 +78,5 @@ if (failures.length) {
   console.error(failures.map(message => `- ${message}`).join('\n'));
   process.exitCode = 1;
 } else {
-  console.log('Validated homepage, privacy page, 16 album pages, 185 ISRC tracks, covers and sitemap.');
+  console.log('Validated homepage, privacy page, 18 album pages, 202 ISRC tracks, covers and sitemap.');
 }

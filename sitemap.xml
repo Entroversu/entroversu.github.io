@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://entroversu.com/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://entroversu.com/og-image.png</image:loc>
       <image:title>Entroversu — Entropy · Universe · Music</image:title>
@@ -94,7 +94,7 @@
   </url>
   <url>
     <loc>https://entroversu.com/albums/the-day-after-cosmic-suicide/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://entroversu.com/covers/011.jpg</image:loc>
       <image:title>The Day After Cosmic Suicide — Entroversu</image:title>
@@ -134,10 +134,26 @@
   </url>
   <url>
     <loc>https://entroversu.com/albums/queens-of-the-electric-twelve-realms/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://entroversu.com/covers/016.jpg</image:loc>
       <image:title>Queens Of The Electric Twelve Realms — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/how-it-sometimes-just-goes/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/017.jpg</image:loc>
+      <image:title>How It Sometimes Just Goes — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/dreaming-of-the-golden-love/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/018.jpg</image:loc>
+      <image:title>Dreaming Of The Golden Love — Entroversu</image:title>
     </image:image>
   </url>
 </urlset>
