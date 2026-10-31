@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const indexPath = path.join(repoRoot, 'index.html');
 const siteUrl = 'https://entroversu.com';
-const lastModified = '2026-10-09';
+const lastModified = '2026-10-31';
 const previousSitemap = fs.readFileSync(path.join(repoRoot, 'sitemap.xml'), 'utf8');
 const previousDates = new Map([...previousSitemap.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)].map(match => [match[1], match[2]]));
 
@@ -89,7 +89,7 @@ for (let index = 0; index < lines.length; index += 1) {
   );
 }
 
-if (albums.length !== 18) throw new Error(`Expected 18 albums, found ${albums.length}.`);
+if (albums.length !== 20) throw new Error(`Expected 20 albums, found ${albums.length}.`);
 
 const artistId = `${siteUrl}/#artist`;
 const artistSchema = {

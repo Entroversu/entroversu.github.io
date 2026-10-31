@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://entroversu.com/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <image:image>
       <image:loc>https://entroversu.com/og-image.png</image:loc>
       <image:title>Entroversu — Entropy · Universe · Music</image:title>
@@ -150,10 +150,26 @@
   </url>
   <url>
     <loc>https://entroversu.com/albums/dreaming-of-the-golden-love/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <image:image>
       <image:loc>https://entroversu.com/covers/018.jpg</image:loc>
       <image:title>Dreaming Of The Golden Love — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/mister-brians-doubly-coherent-journey/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/019.jpg</image:loc>
+      <image:title>Mister Brian’s Doubly Coherent Journey — Entroversu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://entroversu.com/albums/the-marstastic-odyssey-to-mount-olymp/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <image:image>
+      <image:loc>https://entroversu.com/covers/020.jpg</image:loc>
+      <image:title>The Marstastic Odyssey to Mount Olymp — Entroversu</image:title>
     </image:image>
   </url>
 </urlset>
